@@ -6150,15 +6150,19 @@ void CBasePlayer::CheatImpulseCommands( int iImpulse )
 		EquipSuit();
 
 		// Give the player everything!
+		GiveAmmo( 255,  "GaussEnergy");
 		GiveAmmo( 255,	"Pistol");
+		GiveAmmo( 255,  "BTG");
 		GiveAmmo( 255,	"AR2");
 		GiveAmmo( 5,	"AR2AltFire");
-		GiveAmmo( 255,	"SMG1");
+		GiveAmmo( 425,	"SMG1");
+		GiveAmmo( 425,  "MINIGUN");
+		GiveAmmo( 425,  "Nailgun");
 		GiveAmmo( 255,	"Buckshot");
 		GiveAmmo( 3,	"smg1_grenade");
 		GiveAmmo( 3,	"rpg_round");
 		GiveAmmo( 5,	"grenade");
-		GiveAmmo( 32,	"357" );
+		GiveAmmo( 64,	"malorian" );
 		GiveAmmo( 16,	"XBowBolt" );
 #ifdef HL2_EPISODIC
 		GiveAmmo( 5,	"Hopwire" );
@@ -6172,8 +6176,16 @@ void CBasePlayer::CheatImpulseCommands( int iImpulse )
 		GiveNamedItem( "weapon_physcannon" );
 		GiveNamedItem( "weapon_bugbait" );
 		GiveNamedItem( "weapon_rpg" );
-		GiveNamedItem( "weapon_357" );
+		GiveNamedItem( "weapon_malorian" );
 		GiveNamedItem( "weapon_crossbow" );
+		GiveNamedItem( "weapon_COMBAT" );
+		GiveNamedItem( "weapon_supershotgun" );
+		GiveNamedItem( "weapon_nailgun" );
+		GiveNamedItem( "weapon_iontau" );
+		GiveNamedItem( "weapon_stickybomb" );
+		GiveNamedItem( "weapon_ak47" );
+		GiveNamedItem( "weapon_minigun" );
+		GiveNamedItem( "weapon_BTG" );
 #ifdef HL2_EPISODIC
 		// GiveNamedItem( "weapon_magnade" );
 #endif
