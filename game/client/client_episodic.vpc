@@ -129,6 +129,7 @@ $Project "Client (Episodic)"
 
 			// Neon Overdrive
 			$File	"BadApple.cpp"
+			$File	"c_weapon_iontau.cpp"
 		}
 	}
 	
