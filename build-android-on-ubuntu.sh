@@ -27,13 +27,23 @@ install_if_missing() {
 # อัปเดตรายการแพ็กเกจก่อนเริ่ม
 sudo apt-get update
 
-# ตรวจสอบและติดตั้งเฉพาะที่ยังไม่มี
+# ✅ ติดตั้ง packages พื้นฐาน
 install_if_missing openjdk-17-jdk
 install_if_missing zip
 install_if_missing apksigner
 install_if_missing imagemagick
 install_if_missing lib32z1
+install_if_missing lib32stdc++6
+install_if_missing libc6-i386
+install_if_missing libncurses5:i386
+install_if_missing libstdc++6:i386
+install_if_missing python3
+install_if_missing python3-pip
+install_if_missing git
+install_if_missing curl
+install_if_missing unzip
 
+# ✅ เริ่ม build
 echo "🛠 Building for Android 32-bit (ARMv7a)..."
 bash scripts/build-android-armv7a.sh
 
@@ -41,4 +51,10 @@ echo "🛠 Building for Android 64-bit (AArch64)..."
 chmod +x scripts/build-android-aarch64.sh
 bash scripts/build-android-aarch64.sh
 
-echo "✅ Build complete."
+# ✅ คัดลอกไฟล์ที่ build เสร็จแล้วไปไว้ที่ ~/Downloads
+echo "📁 Copying built libraries to ~/Downloads..."
+mkdir -p ~/Downloads
+cp -r srceng-mod-launcher/android/lib/armeabi-v7a ~/Downloads/
+cp -r srceng-mod-launcher/android/lib/arm64-v8a ~/Downloads/
+
+echo "✅ Build complete and files copied to Downloads."
